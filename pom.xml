@@ -45,6 +45,21 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- Mysql -->
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<!-- Migrações Flyaway -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			
+			
+		</dependency>
 	</dependencies>
 
 	<build>
