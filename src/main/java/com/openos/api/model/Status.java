@@ -6,32 +6,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
-
-
 
 @Entity
-@Table(name = "produto")
-@Getter
+@Table(name = "status")
 @Setter
-@ToString
+@Getter
 @EqualsAndHashCode
-public class Produto {
+public class Status {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	@Column (name = "codigo")
 	private Long codigo;
 	
-	@NotNull
 	@Column (name = "nome")
 	private String nome;
-
+	
 	
 
 }
