@@ -25,5 +25,8 @@ public class Cliente {
 	
 	@Column (name = "nome")
 	private String nome;
+	
+	@Column (name = "endereco")
+	private String endereco;
 
 }
