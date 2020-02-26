@@ -1,0 +1,1 @@
+ALTER TABLE cliente ADD  endereco varchar(50);
