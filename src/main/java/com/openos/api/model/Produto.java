@@ -31,6 +31,9 @@ public class Produto {
 	@NotNull
 	@Column (name = "nome")
 	private String nome;
+	
+	@Column(name = "referencia")
+	private String referencia;
 
 	
 

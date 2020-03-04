@@ -1,0 +1,1 @@
+ALTER TABLE produto ADD  referencia varchar(30);
