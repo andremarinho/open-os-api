@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
@@ -37,7 +38,7 @@ public class OrdemServicoResource {
 	
 	
 	@PostMapping
-	public ResponseEntity<OrdemServico> criar(@RequestBody OrdemServico ordemServico, HttpServletResponse response){
+	public ResponseEntity<OrdemServico> criar(@Valid @RequestBody OrdemServico ordemServico, HttpServletResponse response){
 		
 		OrdemServico ordemServicoSalva = ordemServicoRepository.save(ordemServico);
 		
