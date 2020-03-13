@@ -4,8 +4,10 @@
 </br>
 <h2> Tecnologias utilizadas</h2>
 
+<h3>
 	-Spring Boot
 	
 	-Flywaydb para migração do banco de dados
 	
 	-Banco de dados Mysql
+</h3>
