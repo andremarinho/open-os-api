@@ -6,9 +6,12 @@
 
 <ul>
 	<li>Spring Boot</li>
-	
-	<li>Flywaydb para migração do banco de dados</li>
-	
-	<li>Banco de dados Mysql</li>
-	
 </ul>
+
+<ul>	
+	<li>Flywaydb para migração do banco de dados</li>
+</ul>
+
+<ul>	
+	<li>Banco de dados Mysql</li>
+</ul>	
