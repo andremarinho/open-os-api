@@ -5,9 +5,9 @@
 <h2> Tecnologias utilizadas</h2>
 
 <h3>
-	-Spring Boot
+	-[x] Spring Boot
 	
-	-Flywaydb para migração do banco de dados
+	-[x] Flywaydb para migração do banco de dados
 	
-	-Banco de dados Mysql
+	-[x] Banco de dados Mysql
 </h3>
