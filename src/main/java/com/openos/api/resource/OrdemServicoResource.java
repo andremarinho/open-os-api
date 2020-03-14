@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.openos.api.event.RecursoCriadoEvent;
 import com.openos.api.model.OrdemServico;
 import com.openos.api.repository.OrdemServicoRepository;
+import com.openos.api.repository.filter.OrdemServicoFilter;
+import com.openos.api.service.OrdemServicoService;
 
 @RestController
 @RequestMapping("/ordemservico")
@@ -31,16 +33,19 @@ public class OrdemServicoResource {
 	@Autowired
 	private ApplicationEventPublisher publish;
 	
+	@Autowired
+	OrdemServicoService ordemServicoService;
+	
 	@GetMapping
-	public List<OrdemServico> listar(){
-		return this.ordemServicoRepository.findAll();
+	public List<OrdemServico> pesquisar(OrdemServicoFilter ordemServicoFilter){
+		return this.ordemServicoRepository.filtrar(ordemServicoFilter);
 	}
 	
 	
 	@PostMapping
 	public ResponseEntity<OrdemServico> criar(@Valid @RequestBody OrdemServico ordemServico, HttpServletResponse response){
 		
-		OrdemServico ordemServicoSalva = ordemServicoRepository.save(ordemServico);
+		OrdemServico ordemServicoSalva = ordemServicoService.salvar(ordemServico);
 		
 		this.publish.publishEvent(new RecursoCriadoEvent(this, response, ordemServicoSalva.getCodigo()));
 		
