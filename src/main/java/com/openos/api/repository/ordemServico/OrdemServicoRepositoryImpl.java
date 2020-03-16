@@ -31,7 +31,7 @@ public class OrdemServicoRepositoryImpl implements OrdemServicoRepositoryQuery {
 		Root<OrdemServico> root = criteria.from(OrdemServico.class);
 
 		// Criação das restrições
-		
+
 		Predicate[] predicates = criarRestricoes(ordemServicoFilter, builder, root);
 		criteria.where(predicates);
 
@@ -54,13 +54,15 @@ public class OrdemServicoRepositoryImpl implements OrdemServicoRepositoryQuery {
 
 		if (ordemServicoFilter.getDataAberturaDe() != null) {
 
-			builder.greaterThanOrEqualTo(root.get(OrdemServico_.DATA_ABERTURA), ordemServicoFilter.getDataAberturaDe());
+			predicates.add(builder.greaterThanOrEqualTo(root.get(OrdemServico_.DATA_ABERTURA),
+					ordemServicoFilter.getDataAberturaDe()));
 
 		}
 
 		if (ordemServicoFilter.getDataAberturaAte() != null) {
 
-			builder.lessThanOrEqualTo(root.get(OrdemServico_.DATA_ABERTURA), ordemServicoFilter.getDataAberturaAte());
+			predicates.add(builder.lessThanOrEqualTo(root.get(OrdemServico_.DATA_ABERTURA),
+					ordemServicoFilter.getDataAberturaAte()));
 
 		}
 
