@@ -8,13 +8,17 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.openos.api.event.RecursoCriadoEvent;
@@ -37,8 +41,8 @@ public class OrdemServicoResource {
 	OrdemServicoService ordemServicoService;
 	
 	@GetMapping
-	public List<OrdemServico> pesquisar(OrdemServicoFilter ordemServicoFilter){
-		return this.ordemServicoRepository.filtrar(ordemServicoFilter);
+	public Page<OrdemServico> pesquisar(OrdemServicoFilter ordemServicoFilter, Pageable pageable){
+		return this.ordemServicoRepository.filtrar(ordemServicoFilter, pageable);
 	}
 	
 	
@@ -60,6 +64,15 @@ public class OrdemServicoResource {
 		Optional<OrdemServico> ordemServico = this.ordemServicoRepository.findById(codigo);
 		
 		return ordemServico.isPresent() ? ResponseEntity.ok(ordemServico) : ResponseEntity.notFound().build();
+	}
+	
+	
+	
+	@DeleteMapping("/{codigo}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void remover(@PathVariable Long codigo) {
+		System.out.println("O codigo passado para deleção é" + codigo);
+		this.ordemServicoRepository.deleteById(codigo);
 	}
 
 }
