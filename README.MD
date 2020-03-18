@@ -13,6 +13,11 @@
 </br>
 </br>
 </br>
+</br>
+<h2> TODO LIST</h2>
+</br>
+![Tela do projeto](https://user-images.githubusercontent.com/3955746/76990330-8f2d3600-6926-11ea-8564-5770c3c2f70c.jpg)
+
 <h2> Tecnologias utilizadas</h2>
 
 <ul>
