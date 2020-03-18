@@ -4,6 +4,15 @@
 <h3>Geralmente há uma garantia entre os fornecedores e o varejista que possibilita a devolução de produtos defeituosos.</h3>
 <h3>Para automatizar a tarefa de tratamento desses produtos a API OPEN OS fornece diversas funcionalidades.</h3>
 </br>
+</br>
+<h2> Funcionalidades</h2>
+</br>
+<h3>Cadastro de produtos</h3>
+<h3>Cadastro de status</h3>
+<h3>Cadastro de Ordem de serviço</h3>
+</br>
+</br>
+</br>
 <h2> Tecnologias utilizadas</h2>
 
 <ul>
