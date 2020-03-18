@@ -33,4 +33,4 @@
 </ul>	
 
 
-![Banana](http://cdn.osxdaily.com/wp-content/uploads/2013/07/dancing-banana.gif "Olha a banana dançando!")
+![Banana](https://user-images.githubusercontent.com/3955746/76990330-8f2d3600-6926-11ea-8564-5770c3c2f70c.jpg "Olha a banana dançando!")
