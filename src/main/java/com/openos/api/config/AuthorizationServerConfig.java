@@ -41,6 +41,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	public TokenStore tokenStore() {
 		return new  InMemoryTokenStore();
 	}
+	
+	
 
 }
 
