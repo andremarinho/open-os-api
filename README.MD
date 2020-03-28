@@ -32,5 +32,12 @@
 	<li>Banco de dados Mysql</li>
 </ul>	
 
+<ul>	
+	<li>OAUTH2</li>
+</ul>
+<ul>	
+	<li>Spring Security</li>
+</ul>
+
 
 ![](https://user-images.githubusercontent.com/3955746/76990330-8f2d3600-6926-11ea-8564-5770c3c2f70c.jpg "Tela do projeto no STS")
