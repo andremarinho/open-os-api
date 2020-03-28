@@ -27,6 +27,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
+			.antMatchers("/ordemservico").permitAll()
 			.anyRequest().authenticated()
 			.and()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
@@ -34,9 +35,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			
 	}
 	
+	@Override
+	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+		// TODO Auto-generated method stub
+		super.configure(resources);
+	}
 	
 	
-	
-	
-
 }
